@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="description" content="Галактика — демо мини-приложения студии оклейки и детейлинга" />
+    <title>Галактика — детейлинг · Демо</title>
+    <script async src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Галактика, на главную">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span class="brand-name"><b>ГАЛАКТИКА</b><small>DETAILING STUDIO</small></span>
+        </a>
+        <button class="demo-badge" id="profileButton" aria-label="О демоверсии">ДЕМО
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <img class="hero-image" src="assets/hero-car.png" alt="Чёрный автомобиль в студии защитной оклейки" />
+          <div class="hero-shade"></div>
+          <div class="hero-content">
+            <div class="eyebrow"><span></span> МОСКВА · ОКЛЕЙКА И ДЕТЕЙЛИНГ</div>
+            <h1>Другая<br /><em>орбита</em><br />защиты.</h1>
+            <p>Безупречный вид. Защита кузова.<br />Внимание к каждой детали.</p>
+            <div class="hero-actions">
+              <button class="primary-button" data-open-booking>
+                Рассчитать стоимость
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+              <button class="glass-button" id="scrollServices" aria-label="Смотреть услуги">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="hero-proof">
+            <div><strong>PPF</strong><span>защита кузова</span></div>
+            <div><strong>Детейлинг</strong><span>уход за деталями</span></div>
+            <div><strong>Москва</strong><span>студия оклейки</span></div>
+          </div>
+        </section>
+
+        <section class="section services-section" id="services">
+          <div class="section-heading">
+            <div>
+              <span class="kicker">УСЛУГИ</span>
+              <h2>Ваш авто.<br />Ваш характер.</h2>
+            </div>
+            <button class="text-button" id="showAllServices">Все услуги <span>6</span></button>
+          </div>
+
+          <div class="category-tabs" role="group" aria-label="Категории услуг">
+            <button class="category-tab active" data-category="all">Все</button>
+            <button class="category-tab" data-category="wrap">Оклейка</button>
+            <button class="category-tab" data-category="detail">Детейлинг</button>
+            <button class="category-tab" data-category="comfort">Комфорт</button>
+          </div>
+
+          <div class="service-grid" id="serviceGrid"></div>
+        </section>
+
+        <section class="section feature-section">
+          <div class="feature-card">
+            <div class="film-visual" aria-hidden="true">
+              <div class="film-glow"></div>
+              <svg viewBox="0 0 240 190">
+                <path class="car-line" d="M22 128c16-4 28-24 37-39 7-12 18-19 33-22l48-9c20-4 37 4 52 19l27 29c8 8 12 18 10 31l-2 11H18c-8-8-6-17 4-20Z" />
+                <path class="film-line" d="M47 117c37-10 57-40 73-74 22 29 44 49 81 65" />
+                <circle cx="64" cy="145" r="21" /><circle cx="188" cy="145" r="21" />
+              </svg>
+              <span>PPF / PROTECTION</span>
+            </div>
+            <div class="feature-copy">
+              <span class="kicker">ЗАЩИТА В ДЕТАЛЯХ</span>
+              <h2>Прозрачная.<br />Незаменимая.</h2>
+              <p>Полиуретановая плёнка принимает на себя дорожные воздействия и сохраняет внешний вид кузова.</p>
+              <div class="feature-metrics">
+                <div><strong>01</strong><span>подготовка кузова</span></div>
+                <div><strong>02</strong><span>точная оклейка</span></div>
+                <div><strong>03</strong><span>контроль деталей</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section process-section">
+          <span class="kicker">КАК ЭТО РАБОТАЕТ</span>
+          <h2>Спокойно. Чисто. Надолго.</h2>
+          <div class="timeline">
+            <article><span>01</span><div><h3>Осмотр автомобиля</h3><p>Оценим кузов и подберём оптимальную защиту.</p></div></article>
+            <article><span>02</span><div><h3>Подготовка и оклейка</h3><p>Работаем в чистой зоне с контролем каждого элемента.</p></div></article>
+            <article><span>03</span><div><h3>Контроль после оклейки</h3><p>Через две недели — осмотр плёнки и коррекция при необходимости.</p></div></article>
+          </div>
+        </section>
+
+        <section class="section contact-section" id="contacts">
+          <div class="contact-card">
+            <div class="contact-orbit" aria-hidden="true"><span>G</span><i></i><i></i><small>GALATICA / MOSCOW</small></div>
+            <div class="contact-content">
+              <span class="kicker">НА СВЯЗИ</span>
+              <h2>Галактика.<br />Москва.</h2>
+              <p><span class="online-dot"></span> +7 (968) 382-44-44</p>
+              <div class="contact-actions">
+                <a class="secondary-button" href="https://t.me/GalaticaDetailing" target="_blank" rel="noreferrer">Наш Telegram</a>
+                <a class="icon-button" href="tel:+79683824444" aria-label="Позвонить">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1Z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Основная навигация">
+        <button class="nav-item active" data-target="home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span>Главная</span>
+        </button>
+        <button class="nav-item" data-target="services">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 0h6v6h-6v-6Z"/></svg><span>Услуги</span>
+        </button>
+        <button class="nav-main" data-open-booking aria-label="Записаться">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <button class="nav-item" data-target="contacts">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Контакты</span>
+        </button>
+        <button class="nav-item" id="chatButton">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z"/></svg><span>Чат</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="sheet-backdrop" id="sheetBackdrop"></div>
+
+    <section class="bottom-sheet" id="serviceSheet" inert aria-modal="true" role="dialog" aria-labelledby="serviceSheetTitle">
+      <div class="sheet-handle"></div>
+      <button class="sheet-close" data-close-sheet aria-label="Закрыть">×</button>
+      <div class="sheet-icon" id="sheetIcon"></div>
+      <span class="kicker" id="sheetKicker">УСЛУГА</span>
+      <h2 id="serviceSheetTitle"></h2>
+      <p class="sheet-description" id="sheetDescription"></p>
+      <ul class="benefit-list" id="sheetBenefits"></ul>
+      <div class="sheet-price-row"><span>Стоимость</span><strong id="sheetPrice"></strong></div>
+      <button class="primary-button full" id="chooseService">Выбрать эту услугу</button>
+    </section>
+
+    <section class="bottom-sheet booking-sheet" id="bookingSheet" inert aria-modal="true" role="dialog" aria-labelledby="bookingTitle">
+      <div class="sheet-handle"></div>
+      <button class="sheet-close" data-close-sheet aria-label="Закрыть">×</button>
+      <span class="kicker">ДЕМО · РАСЧЁТ СТОИМОСТИ</span>
+      <h2 id="bookingTitle">Подберём защиту<br />для вашего авто</h2>
+      <p class="sheet-description">Посмотрите, как будет выглядеть запись. В демоверсии данные никуда не отправляются.</p>
+      <form id="bookingForm">
+        <label>Ваш автомобиль<input id="carInput" type="text" placeholder="Например, Porsche 911" autocomplete="off" required /></label>
+        <label>Что вас интересует<select id="serviceSelect" required></select></label>
+        <label>Ваш телефон<input id="phoneInput" type="tel" placeholder="+7 999 000-00-00" autocomplete="off" inputmode="tel" /></label>
+        <p class="demo-note">Можно использовать вымышленные данные. Это демонстрация, запись в студию не создаётся.</p>
+        <button class="primary-button full" type="submit">Попробовать запись <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+      </form>
+    </section>
+
+    <div class="toast" id="toast" role="status"><span>✓</span><p><b>Демо-запись готова</b><small>Данные не отправлены</small></p></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
