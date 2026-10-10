@@ -24,4 +24,12 @@ GitHub Pages публикует файлы из корня ветки main. Фо
 
 В @BotFather выберите нужного бота: /mybots → Bot Settings → Configure Mini App. Включите Mini App и укажите HTTPS-адрес выше. Для кнопки меню задайте тот же адрес и подпись «Открыть демо» через Menu Button или /setmenubutton.
 
-Канал @GalaticaDetailing и контакт @GalactiaDetailingMoscow не используются как бот приложения. Для Mini App нужен отдельный бот; его подключение выполняется отдельно после выбора пользователем.
+Выбранный бот: https://t.me/okleykacarsbot
+
+Настройка кнопки меню в @BotFather:
+1. Отправьте /setmenubutton.
+2. Выберите @okleykacarsbot.
+3. Отправьте https://n1kseeman.github.io/galatica-telegram-mini-app/.
+4. Задайте подпись «Открыть демо».
+
+Для кнопки запуска в профиле бота дополнительно включите Main Mini App через /mybots → @okleykacarsbot → Bot Settings → Configure Mini App, указав тот же адрес. Автоматическая настройка бота пока не выполнена: доступ к приложению Telegram не разрешён.
